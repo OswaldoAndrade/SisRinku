@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.32630.194
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WebRinku", "WebRinku.csproj", "{76925A47-572E-46B6-ACB9-7111B27CBC30}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RinkuAPI", "..\RinkuAPI\RinkuAPI.csproj", "{754F28CA-4334-487D-8196-15B9977E3DB4}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{76925A47-572E-46B6-ACB9-7111B27CBC30}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{76925A47-572E-46B6-ACB9-7111B27CBC30}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{76925A47-572E-46B6-ACB9-7111B27CBC30}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{76925A47-572E-46B6-ACB9-7111B27CBC30}.Release|Any CPU.Build.0 = Release|Any CPU
+		{754F28CA-4334-487D-8196-15B9977E3DB4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{754F28CA-4334-487D-8196-15B9977E3DB4}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{754F28CA-4334-487D-8196-15B9977E3DB4}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{754F28CA-4334-487D-8196-15B9977E3DB4}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {36C286D3-7B86-4C5C-90F2-239FA3F1F208}
+	EndGlobalSection
+EndGlobal

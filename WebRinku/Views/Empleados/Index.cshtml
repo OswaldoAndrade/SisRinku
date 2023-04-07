@@ -1,0 +1,149 @@
+﻿@{
+    ViewBag.Title = "Empleados";
+}
+<div class="row">
+    <div class="col-lg-12">
+        <div class="card">
+            <div class="card-header">
+                <h2>LISTA DE EMPLEADOS</h2>
+            </div>
+            <div class="card-body">
+                <a class="btn btn-success" style="margin-bottom:10px" id="btnNuevo"><i class="fa fa-plus"></i>Agregar Nuevo</a>
+                <table id="dtEmpleados" class="table">
+                    <thead>
+                        <tr>
+                            <th>Id</th>
+                            <th>Nombre</th>
+                            <th>Rol</th>
+                            <th>Estatus</th>
+                            <th></th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!--MODAL PARA AGREGAR O ACTUALIZAR EMPLEADO-->
+<div class="modal fade" tabindex="-1" role="dialog" id="dvAgregar">
+    <div class="modal-dialog modal-md" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                <h4 class="modal-title">AGREGAR EMPLEADO</h4>
+            </div>
+
+            <div class="modal-body">
+                <div class="container-fluid">
+                    <div class="row" id="divId">
+                        <div class="col-md-12 form-group">
+                            <label>Numero</label>
+                            <input id="txtId" class="form-control" type="text" aria-label="Numero de Empleado" disabled="disabled" />
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-12 form-group">
+                            <label>Nombre</label>
+                            <input id="txtNombre" class="form-control" type="text" aria-label="Nombre" />
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-12 form-group">
+                            <label>Rol</label>
+                            <select id="ddlRol" class="selectpicker form-control"></select>
+                        </div>
+                    </div>
+
+                    <div class="row" id="divEstatus">
+                        <div class="col-md-12 form-group">
+                            <input class="form-check-input" type="checkbox" value="" id="chkActivo">
+                            <label class="form-check-label" for="flexCheckDefault"> Activo </label>
+                        </div>
+                    </div>
+
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-default" data-dismiss="modal">Regresar</button>
+                    <button id="btnAgregar" type="button" class="btn btn-primary">Agregar</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<!--MODAL PARA AGREGAR UN MOVIMIENTO-->
+<div class="modal fade" tabindex="-1" role="dialog" id="divCaptura">
+    <div class="modal-dialog modal-md" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                <h4 class="modal-title">CAPTURA DE MOVIMIENTO</h4>
+            </div>
+
+            <div class="modal-body">
+                <div class="container-fluid">
+                    <div class="row">
+                        <div class="col-md-12 form-group">
+                            <label>Numero</label>
+                            <input id="txtId_mov" class="form-control" type="text" aria-label="Numero de Empleado" disabled="disabled" />
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-12 form-group">
+                            <label>Nombre</label>
+                            <input id="txtNombre_mov" class="form-control" type="text" aria-label="Nombre" disabled="disabled" />
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-12 form-group">
+                            <label>Rol</label>
+                            <select id="ddlRol_mov" class="selectpicker form-control" disabled="disabled"></select>
+                        </div>
+                    </div>
+
+                    <div class="row">
+                        <div class="col-md-12 form-group">
+                            <label>Mes</label>
+                            <select id="ddlMes_mov" class="selectpicker form-control">
+                                <option value="0"selected>Seleccionar mes</option>
+                                <option value="1">Enero</option>
+                                <option value="2">Febrero</option>
+                                <option value="3">Marzo</option>
+                                <option value="4">Abril</option>
+                                <option value="5">Mayo</option>
+                                <option value="6">Junio</option>
+                                <option value="7">Julio</option>
+                                <option value="8">Agosto</option>
+                                <option value="9">Septiembre</option>
+                                <option value="10">Octubre</option>
+                                <option value="11">Noviembre</option>
+                                <option value="12">Diciembre</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-12 form-group">
+                            <label>Entregas</label>
+                            <input id="txtEntregas_mov" class="form-control" type="text" aria-label="Entregas" onkeypress="return filterFloat(event,this);" maxlength="3"  />
+                        </div>
+                    </div>
+
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-default" data-dismiss="modal">Regresar</button>
+                    <button id="btnAgregarMovimiento" type="button" class="btn btn-primary">Agregar</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+@section scripts{
+    <script type="text/javascript" src="~/Scripts/sweetalert2-8.0.1.min.js"></script>
+    <script type="text/javascript" src="~/Scripts/Empleados.js"></script>
+
+}
